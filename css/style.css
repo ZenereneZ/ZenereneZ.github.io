@@ -83,10 +83,28 @@ h1{
 	color: #ffffff;
 	font-weight: 400;
 }
+.centered{
+  	max-width:40%;
+  	max-height:40%;
+  	text-align:center;
+  	display:block;
+	margin:auto;
+}
+.centered p{
+	padding:5% 0;
+	color:#C0BEBE;
+}
+
+/***************start-reneZ************/
+#reneZ{
+	background:#282A2E;
+	padding:5% 0;
+}
+/***************end-reneZ************/
 
 /***************start-mechanical************/
 #mechanical{
-	background:#282A2E;
+	background:#444B54;
 	padding:5% 0;
 }
 
@@ -135,19 +153,19 @@ h1{
 
 /***************start-electrical************/
 #electrical{
-	background:#444B54;
+	background:#282A2E;
 	padding:5% 0;
 }
 /***************end-electrical************/
 /***************start-software************/
 #software{
-	background:#282A2E;
+	background:#444B54;
 	padding:5% 0;
 }
 /***************end-software************/
 /***************start-team************/
 #team{
-	background:#444B54;
+	background:#282A2E;
 	padding:5% 0;
 }
 /***************end-team************/
