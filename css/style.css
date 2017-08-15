@@ -91,7 +91,7 @@ h1{
 	margin:auto;
 }
 .centered p{
-	padding:5% 0;
+	padding:10% 0%;
 	color:#C0BEBE;
 }
 
@@ -125,7 +125,6 @@ h1{
 	-moz-border-radius: 30em;
 	padding: 45px;
 	background: #313338;
-	cursor: pointer;
 	transition: 0.5s all;
 	-webkit-transition: 0.5s all;
 	-moz-transition: 0.5s all;
@@ -155,6 +154,47 @@ h1{
 #electrical{
 	background:#282A2E;
 	padding:5% 0;
+}
+.images_reg{
+	display: block;
+	float:left;
+	margin-left:5%;
+	text-align: center;
+	width: 25%;
+}
+
+.images_reg  img{
+	max-width: 100%;
+	margin-bottom: 23px;
+	padding: 45px;
+	background: #313338;
+	width:400px;
+	height: 300px;
+}
+.images_reg  h3{
+	color:#ffffff;
+	font-size:1.5em;
+	font-weight :400;
+	padding: 0em 0em 0em 0em;
+	margin-left:25%;
+}
+
+.images_reg  p
+{
+	padding: 0em 0em 1.5em 0em;
+	font-size:0.875em;
+	color:#C0BEBE;
+	line-height: 1.8em;
+	margin-left:25%;
+}
+
+.images_reg ul
+{
+	font-size:0.875em;
+	text-align:left;
+	margin-left: 40%;
+	line-height: 1.8em;
+	color:#C0BEBE;
 }
 /***************end-electrical************/
 /***************start-software************/
