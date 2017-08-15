@@ -1,125 +1,596 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="css/style.css">
-	</head>
-	<body>
-		<!-----------header------------>
-		<div class="wrap">
-			<div class="header">
-				<div class="logo">
-					<h1><a href="index.html"><img src="images/logo.png" alt=""/> reneZ</a></h1>
-				</div>
-					<div class="h_right">
-					<ul class="menu">		
-						<li><a href="#reneZ" class="scroll">reneZ</a></li>
-						<li><a href="#mechanical" class="scroll">Mechanical</a></li>
-						<li><a href="#electrical" class="scroll">Electrical</a></li>
-						<li><a href="#software" class="scroll">Software</a></li>
-						<li><a href="#team" class="scroll">Our team</a></li>
-					</ul>
-					</div>
-			</div>
-		</div>
-		<!-----------//header//------------>
+<!DOCTYPE html>
+<html lang="en">
 
-		<!-----------reneZ------------>
-		<div id="reneZ">
-			<div class="wrap">
-		        <h1>reneZ</h1>
-		        <div class="centered">
-				<img src="images/reneZ1.jpg">
-				<p>
-				Hello, we are a group of Engineering Physics students at the University of British Columbia.
-				This is our project page for our robot "reneZ" which competed in the 2017 ENPH 253 robot competition.
-				Rules of the competition can be found <a href="http://projectlab.engphys.ubc.ca/enph253-2017/competition-2017/">here</a>
-				</p> 
-				</div>
-		        <div class="clear"> </div>
-		    </div>
-		</div>
-		<!-----------//reneZ//------------>
-		<!-----------mechanical------------>
-		<div id="mechanical">
-			<div class="wrap">
-				<h1>Mechanical Design</h1>
-				<div class="images_light">
-			 		<img src="images/cal.png">
-			 		<h3>Design</h3>
-			 		<p></p>  
-				</div>
-				<div class="images_light">
-					 <img src="images/port.png">
-					 <h3>CAD</h3>
-					 <p>We used Onshape and Solidworks to design models for our robot.</p>						   
-				</div>
-				<div class="images_light">
-					 <img src="images/recyle.png">
-					 <h3>Prototype</h3>
-					 <p>Use of laser cutter, 3d printer, and waterjet cutter to build and prototype robot.</p>						   
-				</div>
-				<div class="images_light">
-					 <img src="images/camera.png">
-					 <h3>Integrate</h3>
-					 <p></p>						   
-				</div>
-				<div class="clear"> </div>
-			</div>
-		</div>
-		<!-----------//mechanical//------------>
-		<!-----------electrical------------>
-		<div id="electrical">
-			<div class="wrap">
-				<h1>Electrical Design</h1>
-				<div class="centered">
-				<img src="images/circuits.jpg">
-				</div>
-					<div class="images_reg">
-				 		<a href="images/Tinah.jpg"><img src="images/Tinah.jpg"></a>
-				 		<h3>Tinah</h3>
-				 		<p>reneZ uses a Tinah board as its microcontroller. The Tinah is similar to an arduino, but was created for the ENPH 253 class to provide more functionality for our robot. Some of the features include: 
-				 		<ul>
-				 			<li>-4 DC Motor outputs</li>
-				 			<li>-3 Servo outputs</li>
-				 			<li>-2 buttons and 2 knobs for on board control</li>
-				 			<li>-LCD</li>
-				 			<li>-More can be found <a href="http://projectlab.engphys.ubc.ca/enph253-2017/tinah-2017/">here</a></li>
-				 		</ul>
-				 		</p>  
-					</div>
-					<div class="images_reg">
-				 		<a href="images/H-bridge.png"><img src="images/H-bridge.png"></a>
-				 		<h3>H-bridge</h3>
-				 		<p>The motor outputs on the Tinah board can only provide a motor 9V and 1A. We used Geared Barber Coleman motors which needs ~12V and 1.5A. In order to get enough power to these motors we needed to make a separate H-bridge. A H-bridge is used in order to control the speed and direction of a DC motor, essential for driving our robot.</p>  
-					</div>
-					<div class="images_reg">
-				 		<img src="images/Tinah.jpg">
-				 		<h3>IR-Detector</h3>
-				 		<p>For our competition surface, our robot needed to detect 1kHz and 10kHz infrared frequencies in order to complete the track.</p>  
-					</div>
-				<div class="clear"> </div>
-		    </div>
-		</div>      
-		<!-----------//electrical//------------>
+  <head>
 
-		<!-----------software------------>
-		<div id="software">
-			<div class="wrap">
-		       	<h1>Software Design</h1>
-		      	<div class="clear"> </div>
-		    </div>
-		</div>   
-		<!-----------//software//------------>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Written as the final report for ENPH 253">
+    <meta author="Team 7 - Yuni Fuchioka, Dylan Lu, Masayoshi Kuwabara, Forest Sun">
 
-		<!-----------team------------>
-		<div id="team">
-			<div class="wrap">
-		        <h1>Our Team</h1>
-		        <div class="clear"> </div>
-		    </div>
-		</div>   
-		<!-----------//team//------------>
-   </body>
+    <title>reneZ</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles. Has been modified and renamed from css/agency.css -->
+    <link href="css/custom.css" rel="stylesheet">
+
+  </head>
+
+  <body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+      <a class="navbar-brand" href="#page-top">reneZ</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fa fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#renez">reneZ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#mechanical">Mechanical</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#electrical">Electrical</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#software">Software</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#team">Our Team</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- reneZ -->
+    <section id="renez">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <img class="rounded img-fluid" src="img/reneZ3.jpg">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading">reneZ</h2>
+          </div>
+        </div>
+        <div class="row text-center">
+          <p class="text-muted">
+            Hello, we are a group of Engineering Physics students at the University of British Columbia. This is our project page for our robot "reneZ" which competed in the 2017 ENPH 253 robot competition. Rules of the competition can be found <a href="http://projectlab.engphys.ubc.ca/enph253-2017/competition-2017/">here</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mechanical -->
+    <section class="bg-light portfolio" id="mechanical">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading">Mechanical</h2>
+            <!-- h3 class="section-subheading text-muted">Optional Sub heading</h3 -->
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 col-sm-6 portfolio-item">
+            <div class="portfolio-link" data-toggle="modal" href="#chassis">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fa fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="img/portfolio/01-thumbnail.jpg" alt="">
+            </div>
+            <div class="portfolio-caption">
+              <h4>Chassis</h4>
+              <p class="text-muted">filler text</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 portfolio-item">
+            <div class="portfolio-link" data-toggle="modal" href="#arm">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fa fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="img/portfolio/02-thumbnail.jpg" alt="">
+            </div>
+            <div class="portfolio-caption">
+              <h4>Arm Mechanism</h4>
+              <p class="text-muted">filler text</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 portfolio-item">
+            <div class="portfolio-link" data-toggle="modal" href="#collectionBox">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fa fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="img/portfolio/03-thumbnail.jpg" alt="">
+            </div>
+            <div class="portfolio-caption">
+              <h4>Collection Box</h4>
+              <p class="text-muted">filler text</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 portfolio-item">
+            <div class="portfolio-link" data-toggle="modal" href="#elevator">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fa fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="img/portfolio/02-thumbnail.jpg" alt="">
+            </div>
+            <div class="portfolio-caption">
+              <h4>Elevator</h4>
+              <p class="text-muted">filler text</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Electrical -->
+    <section class="portfolio" id="electrical">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading">Electrical</h2>
+            <h3 class="section-subheading text-muted">Optional Sub heading</h3>
+          </div>
+          <div class="col-sm-6">
+            <p>filler text filler text filler text filler text filler text filler text filler text filler text filler text</p>
+          </div>
+          <div class="col-sm-6">
+            <img class="img-fluid" src="img/circuits.jpg" alt="">
+          </div>
+        </div>
+        </br>
+        <div class="row">
+          <div class="col-md-4 col-sm-6 portfolio-item">
+            <div class="portfolio-link" data-toggle="modal" href="#tinah">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fa fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="img/portfolio/TINAH.jpg" alt="">
+            </div>
+            <div class="portfolio-caption">
+              <h4>TINAH</h4>
+              <p class="text-muted">Microcontroller Board</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 portfolio-item">
+            <div class="portfolio-link" data-toggle="modal" href="#hbridge">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fa fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="img/portfolio/H-bridge_schematic.png" alt="">
+            </div>
+            <div class="portfolio-caption">
+              <h4>H Bridge</h4>
+              <p class="text-muted">Motor Control Circuit</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 portfolio-item">
+            <div class="portfolio-link" data-toggle="modal" href="#irDetector">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fa fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="img/portfolio/TINAH.jpg" alt="">
+            </div>
+            <div class="portfolio-caption">
+              <h4>IR Detector</h4>
+              <p class="text-muted">Signal Processing Circuit</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Software -->
+    <section class="bg-light portfolio" id="software">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading">Software</h2>
+            <!-- h3 class="section-subheading text-muted">Optional Sub heading</h3 -->
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 col-sm-6 portfolio-item">
+            <div class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fa fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="img/portfolio/01-thumbnail.jpg" alt="">
+            </div>
+            <div class="portfolio-caption">
+              <h4>Threads</h4>
+              <p class="text-muted">Illustration</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 portfolio-item">
+            <div class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fa fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="img/portfolio/02-thumbnail.jpg" alt="">
+            </div>
+            <div class="portfolio-caption">
+              <h4>Explore</h4>
+              <p class="text-muted">Graphic Design</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 portfolio-item">
+            <div class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fa fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="img/portfolio/03-thumbnail.jpg" alt="">
+            </div>
+            <div class="portfolio-caption">
+              <h4>Finish</h4>
+              <p class="text-muted">Identity</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Team -->
+    <section id="team">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading">Our Team</h2>
+            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="team-member">
+              <img class="mx-auto rounded-circle" src="img/team/1.jpg" alt="">
+              <h4>Kay Garland</h4>
+              <p class="text-muted">Lead Designer</p>
+              <ul class="list-inline social-buttons">
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fa fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fa fa-facebook"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fa fa-linkedin"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="team-member">
+              <img class="mx-auto rounded-circle" src="img/team/2.jpg" alt="">
+              <h4>Larry Parker</h4>
+              <p class="text-muted">Lead Marketer</p>
+              <ul class="list-inline social-buttons">
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fa fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fa fa-facebook"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fa fa-linkedin"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="team-member">
+              <img class="mx-auto rounded-circle" src="img/team/3.jpg" alt="">
+              <h4>Diana Pertersen</h4>
+              <p class="text-muted">Lead Developer</p>
+              <ul class="list-inline social-buttons">
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fa fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fa fa-facebook"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#">
+                    <i class="fa fa-linkedin"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <span class="copyright">Copyright &copy; reneZ 2017</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Portfolio Modals -->
+
+    <!-- Chassis -->
+    <div class="portfolio-modal modal fade" id="chassis" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2>Chassis</h2>
+                  <p class="item-intro text-muted">filler text</p>
+                  <img class="img-fluid d-block mx-auto" src="img/portfolio/TINAH.jpg" alt="">
+                    <p>Description goes here</p>
+                  <button class="btn btn-primary" data-dismiss="modal" type="button">
+                    <i class="fa fa-times"></i>
+                    Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Arm -->
+    <div class="portfolio-modal modal fade" id="arm" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2>Arm Mechanism</h2>
+                  <p class="item-intro text-muted">filler text</p>
+                  <img class="img-fluid d-block mx-auto" src="img/portfolio/TINAH.jpg" alt="">
+                    <p>Description goes here</p>
+                  <button class="btn btn-primary" data-dismiss="modal" type="button">
+                    <i class="fa fa-times"></i>
+                    Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Collection Box -->
+    <div class="portfolio-modal modal fade" id="collectionBox" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2>Arm</h2>
+                  <p class="item-intro text-muted">filler text</p>
+                  <img class="img-fluid d-block mx-auto" src="img/portfolio/TINAH.jpg" alt="">
+                    <p>Description goes here</p>
+                  <button class="btn btn-primary" data-dismiss="modal" type="button">
+                    <i class="fa fa-times"></i>
+                    Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Elevator -->
+    <div class="portfolio-modal modal fade" id="elevator" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2>Arm</h2>
+                  <p class="item-intro text-muted">filler text</p>
+                  <img class="img-fluid d-block mx-auto" src="img/portfolio/TINAH.jpg" alt="">
+                    <p>Description goes here</p>
+                  <button class="btn btn-primary" data-dismiss="modal" type="button">
+                    <i class="fa fa-times"></i>
+                    Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TINAH -->
+    <div class="portfolio-modal modal fade" id="tinah" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2>TINAH</h2>
+                  <p class="item-intro text-muted">Microcontroller Board</p>
+                  <img class="img-fluid d-block mx-auto" src="img/portfolio/TINAH.jpg" alt="">
+                    <p>reneZ uses a Tinah board as its microcontroller. The Tinah is similar to an arduino, but was created for the ENPH 253 class to provide more functionality for our robot. Some of the features include: 
+                      <ul>
+                        <li>-4 DC Motor outputs</li>
+                        <li>-3 Servo outputs</li>
+                        <li>-2 buttons and 2 knobs for on board control</li>
+                        <li>-LCD</li>
+                        <li>-More can be found <a href="http://projectlab.engphys.ubc.ca/enph253-2017/tinah-2017/">here</a></li>
+                      </ul>
+                    </p>
+                  <button class="btn btn-primary" data-dismiss="modal" type="button">
+                    <i class="fa fa-times"></i>
+                    Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- hbridge -->
+    <div class="portfolio-modal modal fade" id="hbridge" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2>H Bridge</h2>
+                  <p class="item-intro text-muted">Motor Control Circuit</p>
+                  <img class="img-fluid d-block mx-auto" src="img/portfolio/H-bridge_schematic.png" alt="">
+                    <p>The motor outputs on the Tinah board can only provide a motor 9V and 1A. We used Geared Barber Coleman motors which needs ~12V and 1.5A. In order to get enough power to these motors we needed to make a separate H-bridge. A H-bridge is used in order to control the speed and direction of a DC motor, essential for driving our robot.</p>
+                  <button class="btn btn-primary" data-dismiss="modal" type="button">
+                    <i class="fa fa-times"></i>
+                    Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- irDetector -->
+    <div class="portfolio-modal modal fade" id="irDetector" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2>IR Detector</h2>
+                  <p class="item-intro text-muted">Signal Processing Circuit</p>
+                  <img class="img-fluid d-block mx-auto" src="img/portfolio/TINAH.jpg" alt="">
+                    <p>For our competition surface, our robot needed to detect 1kHz and 10kHz infrared frequencies in order to complete the track.</p>
+                  <button class="btn btn-primary" data-dismiss="modal" type="button">
+                    <i class="fa fa-times"></i>
+                    Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/popper/popper.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/agency.min.js"></script>
+
+  </body>
+
 </html>
