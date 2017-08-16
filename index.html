@@ -263,11 +263,21 @@
           <div class="col-lg-12 text-center">
             <h2 class="section-heading">Electrical</h2>
             <!-- h3 class="section-subheading text-muted">Optional Sub heading</h3 -->
-            <p> Optional description </p>
+            <p>Design and Circuitry </p>
             <br>
           </div>
           <div class="col-sm-6">
-            <p>filler text filler text filler text filler text filler text filler text filler text filler text filler text</p>
+            <p>
+            	Sensors and circuits used:
+            	<ul>
+            		<li>4 <a href="https://www.sparkfun.com/datasheets/BOT/QRD1114.pdf">QRD1114</a> for tape following</li>
+            		<li>2 <a href="http://www.mouser.com/ds/2/149/QSD124-890000.pdf">QSD124</a> for infrared detection</li>
+            		<li>2 DC Geared Barber Colman motors</li>
+            		<li>1 <a href="http://projectlab.engphys.ubc.ca/enph253-2017/tinah-2017/">Tinah</a> microcontroller</li>
+            		<li>2 Infrared Detection circuits</li>
+            		<li>2 H-bridges</li>
+            	</ul>
+           	</p>
           </div>
           <div class="col-sm-6">
             <img class="img-fluid" src="img/circuits.jpg" alt="">
@@ -310,11 +320,14 @@
                   <i class="fa fa-plus fa-3x"></i>
                 </div>
               </div>
-              <img class="img-fluid" src="img/portfolio/Tinah.jpg" alt="">
+              <img class="img-fluid" src="img/portfolio/IR-Detect.jpg" alt="">
             </div>
             <div class="portfolio-caption">
               <h4>IR Detector</h4>
               <p class="text-muted">Signal Processing Circuit</p>
+              <p align="left">
+
+              </p>
             </div>
           </div>
         </div>
@@ -328,7 +341,7 @@
           <div class="col-lg-12 text-center">
             <h2 class="section-heading">Software</h2>
             <!-- h3 class="section-subheading text-muted">Optional Sub heading</h3 -->
-            <p> Optional description </p>
+            <p> Design </p>
             <br>
           </div>
         </div>
@@ -450,7 +463,6 @@
           <div class="col-md-4">
             <ul class="list-inline quicklinks">
               <li class="list-inline-item">
-                <a href="https://startbootstrap.com/" target="_blank">Web Template: Start Boostrap</a>
               </li>
             </ul>
           </div>
@@ -630,7 +642,7 @@
                   <h2>H Bridge</h2>
                   <p class="item-intro text-muted">Motor Control Circuit</p>
                   <img class="img-fluid d-block mx-auto" src="img/portfolio/H-bridge_schematic.png" alt="">
-                    <p>The motor outputs on the Tinah board can only provide a motor 9V and 1A. We used Geared Barber Coleman motors which needs ~12V and 1.5A. In order to get enough power to these motors we needed to make a separate H-bridge. A H-bridge is used in order to control the speed and direction of a DC motor, essential for driving our robot.</p>
+                    <p>The motor outputs on the Tinah board can only provide a DC motor 9V and 1A. We used Geared Barber Colman motors which needs ~12V and 1.5A to operate. In order to get enough power to these motors we needed to make a separate H-bridge. A H-bridge is used in order to control the speed and direction of a DC motor, essential for driving our robot.</p>
                   <button class="btn btn-primary" data-dismiss="modal" type="button">
                     <i class="fa fa-times"></i>
                     Close</button>
@@ -658,8 +670,8 @@
                   <!-- Project Details Go Here -->
                   <h2>IR Detector</h2>
                   <p class="item-intro text-muted">Signal Processing Circuit</p>
-                  <img class="img-fluid d-block mx-auto" src="img/portfolio/Tinah.jpg" alt="">
-                    <p>For our competition surface, our robot needed to detect 1kHz and 10kHz infrared frequencies in order to complete the track.</p>
+                  <img class="img-fluid d-block mx-auto" src="img/portfolio/IR-Detect.jpg" alt="">
+                    <p>During the competition our robot needed to detect infrared beams of light at two frequencies, 10Khz and 1Khz. In order to achieve this we used a signal processing circuit which would take the corresponding frequency and amplify it, while attenuating other frequencies.</p>
                   <button class="btn btn-primary" data-dismiss="modal" type="button">
                     <i class="fa fa-times"></i>
                     Close</button>
