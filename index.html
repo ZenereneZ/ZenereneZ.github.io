@@ -347,7 +347,7 @@
           <div class="col-lg-12 text-center">
             <h2 class="section-heading">Software</h2>
             <!-- h3 class="section-subheading text-muted">Optional Sub heading</h3 -->
-            <p> Design </p>
+            <p> <a href="https://github.com/ZenereneZ/reneZ">Github</a> </p>
             <br>
           </div>
         </div>
@@ -387,7 +387,7 @@
                   <i class="fa fa-plus fa-3x"></i>
                 </div>
               </div>
-              <img class="img-fluid" src="img/portfolio/03-thumbnail.jpg" alt="">
+              <img class="img-fluid" src="img/portfolio/state-machine.jpg" alt="">
             </div>
             <div class="portfolio-caption">
               <h4>Finite State Machine</h4>
@@ -406,7 +406,7 @@
           <div class="col-lg-12 text-center">
             <h2 class="section-heading">Our Team</h2>
             <!-- h3 class="section-subheading text-muted">Optional Subheading</h3 -->
-            <p> Optional description </p>
+            <p> Team 7 </p>
           </div>
         </div>
         <br>
@@ -704,10 +704,10 @@
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
-                  <h2>IR Detector</h2>
-                  <p class="item-intro text-muted">Signal Processing Circuit</p>
-                  <img class="img-fluid d-block mx-auto" src="img/portfolio/IR-Detect.jpg" alt="">
-                    <p>During the competition our robot needed to detect infrared beams of light at two frequencies, 10Khz and 1Khz. In order to achieve this we used a signal processing circuit which would take the corresponding frequency and amplify it, while attenuating other frequencies.</p>
+                  <h2>Class Overview</h2>
+                  <p class="item-intro text-muted"></p>
+                  <img class="img-fluid d-block mx-auto" src="img/portfolio/Class.png" alt="">
+                    <p>This is how we structured our robot to run the competition course. It is structured from high level classes to low level environment classes. The controller is the main class of the robot. It is in charge of handling the finite state machine and communication in between components. The driver controls the drive train. It uses QRD sensors to follow on black tape using PID correction. IR detector is used for reading infrared signals. The claw class is used to rotate and position the claw using 3 servo motors. </p>
                   <button class="btn btn-primary" data-dismiss="modal" type="button">
                     <i class="fa fa-times"></i>
                     Close</button>
@@ -733,10 +733,10 @@
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
-                  <h2>IR Detector</h2>
-                  <p class="item-intro text-muted">Signal Processing Circuit</p>
-                  <img class="img-fluid d-block mx-auto" src="img/portfolio/IR-Detect.jpg" alt="">
-                    <p>During the competition our robot needed to detect infrared beams of light at two frequencies, 10Khz and 1Khz. In order to achieve this we used a signal processing circuit which would take the corresponding frequency and amplify it, while attenuating other frequencies.</p>
+                  <h2>Competition Flowchart</h2>
+                  <p class="item-intro text-muted"></p>
+                  <img class="img-fluid d-block mx-auto" src="img/portfolio/Flowchart.png" alt="">
+                  <p>This is a flowchart overview of the tasks needed to be accomplished during the competition.</p>
                   <button class="btn btn-primary" data-dismiss="modal" type="button">
                     <i class="fa fa-times"></i>
                     Close</button>
@@ -762,10 +762,17 @@
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
-                  <h2>IR Detector</h2>
-                  <p class="item-intro text-muted">Signal Processing Circuit</p>
-                  <img class="img-fluid d-block mx-auto" src="img/portfolio/IR-Detect.jpg" alt="">
-                    <p>During the competition our robot needed to detect infrared beams of light at two frequencies, 10Khz and 1Khz. In order to achieve this we used a signal processing circuit which would take the corresponding frequency and amplify it, while attenuating other frequencies.</p>
+                  <h2>Finite State machine</h2>
+                  <p class="item-intro text-muted"></p>
+                  <img class="img-fluid d-block mx-auto" src="img/portfolio/state-machine.jpg" alt="">
+                    <p>We saw using a finite state machine was the easiest and most robust way to accomplish all of the tasks in the competition, instead of using some complex system. We used a finite state machine to model each component of the competition in our robot. We broke the competition up into 4 parts:
+                    <ol align="left">
+                    <li>Driving to the gate: This state accounted for driving up to the gate and detecting when the gate is on/off</li>
+                    <li>Driving to agents: During this state, we needed to adjust speed and PID correction to get the fastest speed up the hill.</li>
+                    <li>Agent collection: This state is for going around the circle and collecting each of the agents using the claw.</li>
+                    <li>Agent dropoff: This state is for driving using infrared sensors (instead of tape), raising the collection box, and delivering the agents down the zipline.</li>
+                    </ol>
+                    </p>
                   <button class="btn btn-primary" data-dismiss="modal" type="button">
                     <i class="fa fa-times"></i>
                     Close</button>
