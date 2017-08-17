@@ -64,10 +64,7 @@
         </div>
         <div class="row text-center">
           <p>
-          	Welcome to the project page of reneZ the robot! ReneZ was built by a group of 2nd year Engineering Physics students at the University of British Columbia, to compete in the 2017 ENPH 253 "Mission Impossi-Bots" Robot Competition.
-          	<!-- 
-            Hello, we are a group of Engineering Physics students at the University of British Columbia. This is our project page for our robot "reneZ" which competed in the 2017 ENPH 253 robot competition. Rules of the competition can be found <a href="http://projectlab.engphys.ubc.ca/enph253-2017/competition-2017/" target="_blank">here</a>
-            -->
+          	Welcome to the project page of reneZ the robot! ReneZ was built by a group of 2nd year Engineering Physics students at the University of British Columbia to compete in the 2017 ENPH 253 "Mission Impossi-Bots" Robot Competition.
           </p>
         </div>
         <br>
@@ -219,7 +216,7 @@
           </div>
           <div class="col-sm-12">
             <p>
-              All major mechanical subsystems were designed and fabricated in-house by our team. We used the cloud-based CAD software <a href="https://www.onshape.com/" target="_blank">Onshape</a> for all of our CAD models, which allowed us to design components collaboratively. By using laser cut pieces of 1/8" hardboard for the majority of our mechanical components, we were able to quickly make prototypes of our ideas and test many design iterations prior to integration.
+              All major mechanical subsystems were designed and fabricated in-house by our team. We used the cloud-based CAD software <a href="https://cad.onshape.com/documents/3d1b02bad6b019b4514b4644/w/90f15aee67f5c28e5026a4dd/e/734252ac5c9204af3335fca4" target="_blank">Onshape</a> for all of our CAD models, which allowed us to design components collaboratively. By using laser cut, wood glued pieces of 1/8" hardboard for the majority of our mechanical components, we were able to quickly make prototypes of our ideas and test many design iterations prior to integration.
            	</p>
           </div>
         </div>
@@ -519,7 +516,13 @@
                   <h2>Chassis</h2>
                   <!-- p class="item-intro text-muted">filler text</p -->
                   <img class="img-fluid d-block mx-auto" src="img/portfolio/chassis.png" alt="">
-                    <p>Description goes here</p>
+                    <p>
+                    	To physically separate mechanical and electrical components, a hardboard box design was chosen for the chassis. With the exception of the drivetrain system, all mechanical components were mounted on the removable top panel, and all of the electronics were mounted on the bottom panel, thus completely enclosing them and protecting them from potential shorts caused by the water present in the challenge.
+                    	<br><br>
+                    	Cutout holes on the bottom panel allowed access to buttons, switches, and a USB port on the TINAH board, which allowed us to upload updated control code onto the robot very quickly. Hole cutouts were made along the side walls of the chassis to allow cables to be cable-tied to, as well as to reduce overall weight.
+                    	<br><br>
+                    	All mechanical and electrical components were mounted onto the chassis using non-permanent fasteners, providing modularity and allowing components to be removed, redesigned, and remounted without affecting the rest of the robot. Hardboard was chosen as the material of choice, as it is electrically insulative, can be fabricated very quickly, and the additional strength and rigidity offered by sheet metal was not required.
+                    </p>
                   <button class="btn btn-primary" data-dismiss="modal" type="button">
                     <i class="fa fa-times"></i>
                     Close</button>
@@ -548,7 +551,13 @@
                   <h2>Arm Mechanism</h2>
                   <!--p class="item-intro text-muted">filler text</p-->
                   <img class="img-fluid d-block mx-auto" src="img/portfolio/arm.png" alt="">
-                    <p>Description goes here</p>
+                    <p>
+                    	The 3 degrees of freedom agent collection arm was designed to provide maximum robustness and flexibility. Using two large servo motors for positioning and a small servo motor for gripping, the coordinates for each arm traversal command could be tuned easily using software.
+                    	<br><br>
+                    	Because of the parallel sponge design on the gripper, the arm was able to grab bath toys without requiring a large amount of positional accuracy, and it very rarely released the toys unintentionally once they were held. The four bar linkage mechanism for the gripper allowed precise tuning of design parameters, such as sponge angle and overall gripper dimensions before and after gripping.
+                    	<br><br>
+                    	Due to different requirements on each joint, each servo motor was mounted using different methods, using gear ratios whenever the full 180 degree rotation was not necessary on the output movement. The optimum mounting method for each motor was developed through many iterations of trial and error, and the resulting motor mounts involved minimal backlash while allowing easy replacement of motors due to non-permanent fasteners and friction mounts.
+                    </p>
                   <button class="btn btn-primary" data-dismiss="modal" type="button">
                     <i class="fa fa-times"></i>
                     Close</button>
