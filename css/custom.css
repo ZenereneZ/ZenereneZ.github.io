@@ -41,8 +41,6 @@ section {
     text-transform: none;
     font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
 
-.bottom-buffer { margin-bottom:20px; } /* taken from https://stackoverflow.com/questions/10085723/twitter-bootstrap-add-top-space-between-rows to add space after rows*/
-
 @media (min-width: 768px) {
   section {
     padding: 150px 0; } }
